@@ -5,6 +5,38 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <!-- <ion-icon name="restaurant" ></ion-icon> -->
+          <h3 class="location text-dark"><strong>A</strong></h3>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <!-- <ion-icon name="restaurant" ></ion-icon> -->
+          <h3 class="location text-dark"><strong>B</strong></h3>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card [routerLink]="['/plan-trip']">
+          <!-- <ion-icon name="restaurant" ></ion-icon> -->
+          <h3 class="location text-dark"><strong>Plan</strong></h3>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <!-- <ion-icon name="restaurant" ></ion-icon> -->
+          <h3 class="location text-dark"><strong>D</strong></h3>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button color="primary" expand="block" (click)="presentPreTrip()">
+    Plan This Trip
+  </ion-button>
 </ion-content>
