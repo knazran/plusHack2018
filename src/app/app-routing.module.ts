@@ -7,7 +7,8 @@ const routes: Routes = [
   { path: 'plan-trip', loadChildren: './plan-trip/plan-trip.module#PlanTripPageModule' },
   { path: 'recommend-trip', loadChildren: './recommend-trip/recommend-trip.module#RecommendTripPageModule' },
   { path: 'pre-trip', loadChildren: './pre-trip/pre-trip.module#PreTripPageModule' },
-  { path: 'start-trip', loadChildren: './start-trip/start-trip.module#StartTripPageModule' }
+  { path: 'start-trip', loadChildren: './start-trip/start-trip.module#StartTripPageModule' },
+  { path: 'trip-consideration', loadChildren: './trip-consideration/trip-consideration.module#TripConsiderationPageModule' }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

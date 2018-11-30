@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { PopoverController } from '@ionic/angular';
 
 @Component({
   selector: 'app-pre-trip',
@@ -8,12 +8,12 @@ import { ModalController } from '@ionic/angular';
 })
 export class PreTripPage implements OnInit {
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor(private popoverCtrl: PopoverController) { }
 
   ngOnInit() {
   }
 
-  closeModal() {
-    this.modalCtrl.dismiss();
+  closePopover() {
+    this.popoverCtrl.dismiss();
   }
 }

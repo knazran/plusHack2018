@@ -1,16 +1,43 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-        <ion-back-button ></ion-back-button>
-    </ion-buttons>
-    <ion-title>Plan Your Trip</ion-title>
-  </ion-toolbar>
 </ion-header>
-
-<ion-content padding>
-    <ion-fab vertical="bottom" horizontal="end" slot="fixed" [routerLink]="['/recommend-trip']">
+<br>
+<ion-content class="bg-color">
+  <ion-card>
+  
+  <ion-card-header>
+    <ion-card-title style="font-size:24px">It is the festive season!</ion-card-title>
+    <ion-card-subtitle>Plan your trip, stress-free</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+      <img src='../../assets/icon/chinese-new-year-2019.jpg'>
+    </ion-card-content>
+</ion-card>
+<ion-card>
+    <ion-card-header>
+      <ion-card-title style="font-size:20px">Where are you heading to?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <ion-item lines="full">
+            <ion-icon name="navigate" slot="start"></ion-icon> Enter Destination
+          </ion-item>
+    </ion-card-content>
+    <ion-card-header>
+        <ion-card-title style="font-size:20px">When is your trip?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <ion-item lines="full">
+            <ion-icon name="calendar" slot="start"></ion-icon> Enter Date
+          </ion-item>
+    </ion-card-content>
+    <ion-button color="primary" expand="full" [routerLink]="['/trip-consideration']">
+      Next
+    </ion-button>
+  </ion-card>
+  
+  
+    <!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed" [routerLink]="['/recommend-trip']">
       <ion-fab-button>
         <ion-icon name="arrow-dropright"></ion-icon>
       </ion-fab-button>
-    </ion-fab>
+    </ion-fab> -->
 </ion-content>

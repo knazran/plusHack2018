@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Home</ion-title>
+    <!-- <ion-title>Home</ion-title> -->
   </ion-toolbar>
 </ion-header>
 
@@ -8,32 +8,28 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-card>
-          <!-- <ion-icon name="restaurant" ></ion-icon> -->
-          <h3 class="location text-dark"><strong>A</strong></h3>
-        </ion-card>
+        <ion-button [routerLink]="['/plan-trip']" color="success" size="large" expand="block">
+				  Plan Your Trip
+				</ion-button>
       </ion-col>
       <ion-col>
-        <ion-card>
-          <!-- <ion-icon name="restaurant" ></ion-icon> -->
-          <h3 class="location text-dark"><strong>B</strong></h3>
-        </ion-card>
+        <ion-button (click)="presentPreTrip()" color="secondary" size="large" expand="block">
+          Saved Trips
+        </ion-button>
       </ion-col>
     </ion-row>
-    <ion-row>
+    <!-- <ion-row>
       <ion-col>
         <ion-card [routerLink]="['/plan-trip']">
-          <!-- <ion-icon name="restaurant" ></ion-icon> -->
           <h3 class="location text-dark"><strong>Plan</strong></h3>
         </ion-card>
       </ion-col>
       <ion-col>
         <ion-card>
-          <!-- <ion-icon name="restaurant" ></ion-icon> -->
           <h3 class="location text-dark"><strong>D</strong></h3>
         </ion-card>
       </ion-col>
-    </ion-row>
+    </ion-row> -->
   </ion-grid>
 
   <ion-button color="primary" expand="block" (click)="presentPreTrip()">

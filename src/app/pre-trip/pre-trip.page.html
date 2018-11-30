@@ -5,7 +5,7 @@
 </ion-header> -->
 
 <ion-content padding>
-  <ion-button color="primary" expand="block" (click)="closeModal()">
+  <ion-button color="primary" expand="block" [routerLink]="['/start-trip']" (click)='closePopover()'>
     Proceed with Planned Trip
   </ion-button>
 </ion-content>

@@ -1,15 +1,66 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-        <ion-back-button ></ion-back-button>
-    </ion-buttons>
-    <ion-title>Recommend Trip</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content padding>
-    <ion-button [routerLink]="['/home']" color="primary" expand="block">
-      Plan This Trip
-    </ion-button>
+<ion-content >
+  <br>
+  <ion-card style="background-color:white">
+  <ion-card-header style="padding-bottom:0cm;padding-top:10px">
+      <ion-card-title style="font-size:18px">Recommended Travel Time</ion-card-title>
+    </ion-card-header>
+    <ion-card-content style="padding:0cm">
+        <ion-item lines="none" class='top-item'>
+          <ion-icon name="calendar" slot="start"></ion-icon> <strong style='font-color:grey'>Date:</strong>19 February 2019
+        </ion-item>
+        <ion-item lines="none" class='top-item'>
+          <ion-icon name="time" slot="start"></ion-icon> <strong style='font-color:grey'>Depart Time:</strong>8.30am
+        </ion-item>
+        <ion-item lines="none" class='top-item'>
+          <ion-icon name="car" slot="start"></ion-icon> <strong style='font-color:grey'>Arrival Time:</strong> 12.00pm
+        </ion-item>
+        <!-- <ion-item lines="none" style='font-size:14px;height:36px'>
+          <ion-icon name="timer" slot="start"></ion-icon> <strong style='font-color:grey'>Travel Duration:</strong>3h30m
+        </ion-item> -->
+        <ion-chip color="success">
+          <ion-icon name="gift" ></ion-icon>
+          <ion-label>Commit to travel plan and earn 1500 points</ion-label>
+        </ion-chip>
+    </ion-card-content>
+  </ion-card>
+  <img src='../../assets/icon/IMG_3587.jpg' style="position: absolute; z-index: -5; top:110px;left:0px;width: 450px;height:400px">
+  
+  <ion-card class="bottom-card">
+    <ion-card-header style="padding-bottom:0cm;padding-top:10px">
+      <ion-card-title style="font-size:18px">Predicted Traffic Conditions</ion-card-title>
+    </ion-card-header>
+    <ion-card-content style="padding:0cm">
+        <div style="height: 180px">
+          <canvas style="margin:0px;"id="projectionChart" ></canvas>
+        </div>
+      
+    </ion-card-content>
+    <!-- <ion-card-header style="padding-bottom:10px;padding-top:10px">
+      <ion-card-title style="font-size:18px">Reward Points</ion-card-title>
+      <ion-card-subtitle style="font-size:14px">Follow this plan and earn $$$$$</ion-card-subtitle>
+    </ion-card-header> -->
+    <ion-card-content style="padding:0cm">
+      <ion-button color="success" expand='block'>
+        Save The Trip
+      </ion-button>
+      <ion-grid style='padding:0cm'>
+        <ion-row>
+          <ion-col>
+            <ion-button fill="outline" color="warning" expand='block'>
+              Plan Again
+            </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button fill="outline" color="danger" expand='block'>
+                Cancel
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+    </ion-card-content>
+    
+  </ion-card>
     
 </ion-content>
