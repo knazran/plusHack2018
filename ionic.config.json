@@ -1,0 +1,7 @@
+{
+  "name": "plushack",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
