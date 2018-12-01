@@ -14,6 +14,8 @@ export class StartTripPage implements OnInit {
   redirect_audio: any;
   thanks_audio: any;
 
+  plussie_img = '../../assets/icon/plussie.png';
+
   plussie_count = 0;
 
   take_a_break_audio: any;
@@ -61,6 +63,7 @@ export class StartTripPage implements OnInit {
     }
 
     if (this.plussie_count === 1) {
+      this.plussie_img = '../../assets/icon/plussie_happy.png';
       this.rnr_audio.play();
       const toast = await this.toastCtrl.create({
         // tslint:disable-next-line:quotemark
@@ -70,23 +73,31 @@ export class StartTripPage implements OnInit {
         color: 'primary',
         cssClass: 'plussie-talks'
       });
+      toast.onDidDismiss().then(data => {
+        this.plussie_img = '../../assets/icon/plussie.png';
+      });
       toast.present();
     }
 
     if (this.plussie_count === 2) {
+      this.plussie_img = '../../assets/icon/plussie_omg.png';
       this.congestion_audio.play();
       const toast = await this.toastCtrl.create({
         // tslint:disable-next-line:quotemark
         message: "Congestion head due to heavy rain.",
         position: 'bottom',
-        duration: 10000,
+        duration: 12000,
         color: 'danger',
         cssClass: 'plussie-talks'
+      });
+      toast.onDidDismiss().then(data => {
+        this.plussie_img = '../../assets/icon/plussie.png';
       });
       toast.present();
     }
 
     if (this.plussie_count === 3) {
+      this.plussie_img = '../../assets/icon/plussie_happy.png';
       this.redirect_audio.play();
       const toast = await this.toastCtrl.create({
         // tslint:disable-next-line:quotemark
@@ -97,9 +108,14 @@ export class StartTripPage implements OnInit {
         cssClass: 'plussie-talks'
       });
       toast.present();
+
+      toast.onDidDismiss().then(data => {
+        this.plussie_img = '../../assets/icon/plussie.png';
+      });
     }
 
     if (this.plussie_count === 4) {
+      this.plussie_img = '../../assets/icon/plussie_happy.png';
       this.thanks_audio.play();
       const toast = await this.toastCtrl.create({
         // tslint:disable-next-line:quotemark
@@ -110,7 +126,10 @@ export class StartTripPage implements OnInit {
         cssClass: 'plussie-talks'
       });
       toast.present();
-      this.plussie_count = 0
+      toast.onDidDismiss().then(data => {
+        this.plussie_img = '../../assets/icon/plussie.png';
+      });
+      this.plussie_count = 0;
     }
     this.plussie_count = this.plussie_count + 1;
   }
