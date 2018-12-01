@@ -1,0 +1,42 @@
+.bottom-card{
+    background-color:white;
+    position: absolute;
+    top: 675px;
+    left:0px;
+    right:0px;
+    width:100%;
+    height:250px;
+    margin-left: 0px;
+}
+
+.plussie{
+    height: 98px;
+    width: 98px;
+}
+
+ion-avatar > img{
+    border-radius:50% !important;
+    height:6rem;
+    width:6rem;
+}
+
+#imgwrap {
+min-width:130px;
+min-height:80px;
+// background-color:#17d39b;
+text-align: center!important;
+    img {
+    border:0;
+    max-width:120px;
+    border-radius:50%;
+    margin: auto
+    }  
+}
+
+ion-fab-button .button {
+    background-color: transparent !important;
+ }
+
+ ion-fab[middle] {
+    background-color: #FF6600;
+  }

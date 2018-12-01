@@ -41,18 +41,18 @@
       <ion-card-subtitle style="font-size:14px">Follow this plan and earn $$$$$</ion-card-subtitle>
     </ion-card-header> -->
     <ion-card-content style="padding:0cm">
-      <ion-button color="success" expand='block'>
+      <ion-button color="success" expand='block' [routerLink]="['/home']">
         Save The Trip
       </ion-button>
       <ion-grid style='padding:0cm'>
         <ion-row>
           <ion-col>
-            <ion-button fill="outline" color="warning" expand='block'>
+            <ion-button fill="outline" color="warning" expand='block' [routerLink]="['/home']">
               Plan Again
             </ion-button>
           </ion-col>
           <ion-col>
-            <ion-button fill="outline" color="danger" expand='block'>
+            <ion-button fill="outline" color="danger" expand='block' [routerLink]="['/home']">
                 Cancel
             </ion-button>
           </ion-col>

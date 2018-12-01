@@ -1,9 +1,25 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>start-trip</ion-title>
-  </ion-toolbar>
+
 </ion-header>
 
 <ion-content padding>
-
+  <img src='../../assets/icon/waze2.png' style="position: absolute; z-index: -3; top:30px;left:0px;width: 450px;height:700px">
+  <ion-card class="bottom-card">
+    <!-- <ion-card-header style="padding-bottom:0cm;padding-top:10px">
+      <ion-card-title style="font-size:18px">Predicted Traffic Conditions</ion-card-title>
+    </ion-card-header> -->
+    <ion-content>
+      <div id="imgwrap" (click)="toastTakeABreak()">
+        <img src="../../assets/icon/plussie.png">
+      </div>
+      <!-- <ion-avatar >
+        <img src="../../assets/icon/plussie.png">
+      </ion-avatar> -->
+    </ion-content>
+  </ion-card>
+  <!-- <ion-fab  vertical="bottom" horizontal="end">
+      <ion-fab-button style="background:transparent;box-shadow:none">
+      </ion-fab-button>
+    </ion-fab> -->
+  
 </ion-content>

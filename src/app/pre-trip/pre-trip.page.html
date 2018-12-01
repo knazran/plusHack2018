@@ -5,7 +5,31 @@
 </ion-header> -->
 
 <ion-content padding>
-  <ion-button color="primary" expand="block" [routerLink]="['/start-trip']" (click)='closePopover()'>
+  <h1><strong>Ready for Your Trip?</strong></h1>
+  <img src="../../assets/icon/Highway 3.svg">
+  <h4>Your trip to Kulai is in 30 minutes</h4>
+  <!-- <strong style='font-color:grey'>Depart Time:</strong>8.30am
+  <br>
+  <strong style='font-color:grey'>Arrival Time:</strong> 12.00pm -->
+
+  <ion-chip color="success" style='width:95%'>
+    <ion-icon name="gift" ></ion-icon>
+    <ion-label>You will earn 1500 points for this trip</ion-label>
+  </ion-chip>
+  <ion-chip color="success" style='width:95%'>
+    <ion-icon name="car" ></ion-icon>
+    <ion-label>Traffic conditions are optimal.</ion-label>
+  </ion-chip>
+  <ion-chip color="warning" style='width:95%; margin-bottom: 15px'>
+      <ion-icon name="rainy" ></ion-icon>
+      <ion-label>55% chance of rain from 10.00 am - 11.00 am.</ion-label>
+    </ion-chip>
+
+  <ion-button color="success" expand="block" [routerLink]="['/start-trip']" (click)='closePopover()'>
     Proceed with Planned Trip
   </ion-button>
+  <ion-button color="danger" expand="block" fill='outline' [routerLink]="['/start-trip']" (click)='closePopover()'>
+    Reschedule
+  </ion-button>
+
 </ion-content>
