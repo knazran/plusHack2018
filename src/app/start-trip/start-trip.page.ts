@@ -9,6 +9,7 @@ import { NativeAudio } from '@ionic-native/native-audio/ngx';
 })
 export class StartTripPage implements OnInit {
   take_break_audio: any;
+  hello_world;
   rnr_audio: any;
   congestion_audio: any;
   redirect_audio: any;
@@ -24,6 +25,10 @@ export class StartTripPage implements OnInit {
   }
 
   ngOnInit() {
+    this.hello_world = new Audio();
+    this.hello_world.src = '../assets/hello_world.mp3';
+    this.hello_world.load();
+
     this.take_a_break_audio = new Audio();
     this.take_a_break_audio.src = '../assets/take_a_break.mp3';
     this.take_a_break_audio.load();
@@ -50,6 +55,22 @@ export class StartTripPage implements OnInit {
 
     // Hacky ASS shit FUCKING WHY
     if (this.plussie_count === 0) {
+      this.plussie_img = '../../assets/icon/plussie_happy.png';
+      this.hello_world.play();
+      const toast = await this.toastCtrl.create({
+        // tslint:disable-next-line:quotemark
+        message: "Hi everyone, I'm Plussie",
+        position: 'bottom',
+        duration: 3000,
+        color: 'primary',
+        cssClass: 'plussie-talks'
+      });
+      toast.present();
+      toast.onDidDismiss().then(data => {
+        this.plussie_img = '../../assets/icon/plussie.png';
+      });
+    }
+    if (this.plussie_count === 1) {
       this.take_a_break_audio.play();
       const toast = await this.toastCtrl.create({
         // tslint:disable-next-line:quotemark
@@ -62,7 +83,7 @@ export class StartTripPage implements OnInit {
       toast.present();
     }
 
-    if (this.plussie_count === 1) {
+    if (this.plussie_count === 2) {
       this.plussie_img = '../../assets/icon/plussie_happy.png';
       this.rnr_audio.play();
       const toast = await this.toastCtrl.create({
@@ -79,12 +100,12 @@ export class StartTripPage implements OnInit {
       toast.present();
     }
 
-    if (this.plussie_count === 2) {
+    if (this.plussie_count === 3) {
       this.plussie_img = '../../assets/icon/plussie_omg.png';
       this.congestion_audio.play();
       const toast = await this.toastCtrl.create({
         // tslint:disable-next-line:quotemark
-        message: "Congestion head due to heavy rain.",
+        message: "Congestion ahead due to heavy rain.",
         position: 'bottom',
         duration: 12000,
         color: 'danger',
@@ -96,7 +117,7 @@ export class StartTripPage implements OnInit {
       toast.present();
     }
 
-    if (this.plussie_count === 3) {
+    if (this.plussie_count === 4) {
       this.plussie_img = '../../assets/icon/plussie_happy.png';
       this.redirect_audio.play();
       const toast = await this.toastCtrl.create({
@@ -114,7 +135,7 @@ export class StartTripPage implements OnInit {
       });
     }
 
-    if (this.plussie_count === 4) {
+    if (this.plussie_count === 5) {
       this.plussie_img = '../../assets/icon/plussie_happy.png';
       this.thanks_audio.play();
       const toast = await this.toastCtrl.create({
